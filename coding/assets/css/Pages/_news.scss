@@ -1,0 +1,83 @@
+main.news {
+    .container {
+        .news_list {
+            a {
+                padding: 30rem 50rem;
+                @include media('sp') {
+                    padding: 40rem 25rem;
+                }
+                border-top: #E5E5E5 1px solid;
+                display: flex;
+                gap: 60rem;
+                align-items: center;
+                transition: all .35s;
+                &:hover {
+                    opacity: .75;
+                }
+                &:last-child {
+                    border-bottom: #E5E5E5 1px solid;
+                }
+                img {
+                    width: 200rem;
+                    height: 143rem;
+                    object-fit: cover;
+                }
+                .news_content {
+                    font-weight: 600;
+                    .time {
+                        font-size: 16rem;
+                        @include media('sp') {
+                            font-size: 24rem;
+                        }
+                    }
+                    p {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        word-wrap: break-word;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 1;
+                    }
+                }
+            }
+        }
+
+        // single
+        .single_news {
+            @include media('pc') {
+                padding: 0 50rem;
+            }
+            .top {
+                font-weight: 600;
+                border-bottom: 1px solid #E5E5E5;
+                padding-bottom: 25rem;
+                h3.news_ttl {
+                    font-size: 28rem;
+                    @include media('sp') {
+                        font-size: 40rem;
+                    }
+                }
+                margin-bottom: 40rem;
+            }
+            .img {
+                img {
+                    width: 100%;
+                    height: 560rem;
+                    object-fit: cover;
+                }
+            }
+            .content {
+                padding: 70rem 0 145rem;
+                line-height: 40rem;
+            }
+            .btn {
+                margin-left: 0;
+                margin-right: auto;
+                @include media('pc') {
+                    width: 220rem;
+                    font-size: 22rem;
+                }
+            }
+        }
+    }
+}

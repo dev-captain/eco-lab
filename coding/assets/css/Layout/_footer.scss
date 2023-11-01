@@ -1,0 +1,153 @@
+footer {
+    .contact {
+        position: relative;
+        padding-top: 65rem;
+        @include media('sp') {
+            padding-top: 45rem;
+        }
+        .img {
+            position: absolute;
+            left: 50rem;
+            top: 0;
+            img {
+                width: 250.5rem;
+            }
+            @include media('sp') {
+                left: 25rem;
+                width: 220rem;
+                top: 10rem;
+                
+            }
+        }
+        .ttl {
+            position: relative;
+            z-index: 10;
+        }
+        &_container {
+            background: #f5f5f5;
+            text-align: center;
+            padding-bottom: 80rem;
+            .contact_des {
+                line-height: 50rem;
+                padding-top: 60rem;
+                padding-bottom: 35rem;
+                @include media('sp') {
+                    padding: 60rem 0 50rem;
+                }
+            }
+            .contact_tel {
+                display: flex;
+                align-items: flex-end;
+                gap: 15rem;
+                line-height: 1;
+                justify-content: center;
+                .tel {
+                    font-size: 24rem;
+                    @include media('sp') {
+                        font-size: 36rem;
+                    }
+                }
+                .number {
+                    font-size: 36rem;
+                    @include media('sp') {
+                        font-size: 54rem;
+                    }
+                }
+            }
+            .btn {
+                margin-top: 50rem;
+                @include media('pc') {
+                    width: 278rem;
+                    font-size: 22rem;
+                }
+                @include media('sp') {
+                    font-size: 33rem;
+                }
+            }
+        }
+    }
+    .foot {
+        background: $primary;
+        padding: 70rem 50rem 75rem;
+        &_container {
+            display: flex;
+            gap: 260rem;
+            align-items: center;
+            color: #fff;
+            @include media('sp') {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 80rem;
+            }
+            .left {
+                .logo {
+                    img {
+                        width: 250rem;
+                        @include media('sp') {
+                            width: 280rem;
+                        }
+                    }
+                }
+                &_info {
+                    line-height: 50rem;
+                    margin: 55rem 0 30rem;
+                }
+                .sns {
+                    svg {
+                        transition: all .35s;
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                    .insta {
+                        margin-right: 35rem;
+                        width: 32rem;
+                        @include media('sp') {
+                            width: 41.6rem;
+                        }
+                    }
+                    .face {
+                        width: 16.6rem;
+                        @include media('sp') {
+                            width: 21.5rem;
+                        }
+                    }
+                }
+            }
+            .right {
+                display: flex;
+                gap: 85rem;
+                @include media('sp') {
+                    flex-direction: column;
+                    gap: 0rem;
+                }
+                img {
+                    width: 30rem;
+                    margin-right: 5rem;
+                    @include media('sp') {
+                        width: 45rem;
+                    }
+                }
+                ul {
+                    li {
+                        line-height: 1;
+                        margin-bottom: 30rem;
+                        transition: .35s all;
+                        @include media('sp') {
+                            margin-bottom: 40rem;
+                        }
+                        &:hover {
+                            opacity: .75;
+                        }
+                        &:first-child {
+                            @include media('pc') {
+                                margin-top: 45rem;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+    }
+}

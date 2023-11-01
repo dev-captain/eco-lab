@@ -1,0 +1,16 @@
+main.manage {
+    .container {
+        
+        .tbl {
+            margin: 80rem 0;
+        }
+        ul {
+            list-style-type: disc;
+            list-style-position: outside;
+            padding-left: 30rem;
+            @include media('sp') {
+                padding-left: 40rem;
+            }
+        }
+    }
+}

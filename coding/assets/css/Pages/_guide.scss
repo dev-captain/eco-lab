@@ -1,0 +1,96 @@
+main.guide {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+       
+        .guide_blog {
+            position: relative;
+            margin-bottom: 80rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &>div {
+                width: 770rem;
+
+                img {
+                    width: 100%;
+                }
+
+                @include media('sp') {
+                    width: calc(100% - 25rem);
+                }
+            }
+
+            .content {
+                background: #F3F3F3;
+
+                @include media('pc') {
+                    height: 400rem;
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+                @include media('sp') {
+                    width: calc(100% - 50rem);
+                    position: relative;
+                    margin-left: auto;
+                    margin-right: 0;
+                    padding: 80rem 60rem;
+                    margin-top: -30rem;
+                }
+
+                .wrap {
+                    @include media('pc') {
+                        position: absolute;
+                        left: 100rem;
+                        top: 50%;
+                        transform: translateY(-50%);
+                    }
+
+                    .guide_ttl {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 25rem;
+
+                        span {
+                            font-size: 28rem;
+                            @include media('sp') {
+                                font-size: 42rem;
+                            }
+                        }
+                    }
+
+                    p {
+                        line-height: 60rem;
+                        margin-top: 30rem;
+                        @include media('sp') {
+                            margin-top: 50rem;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                .img {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+
+                .content {
+                    @include media('pc') {
+                        right: auto;
+                        left: 0;
+                    }
+
+                    @include media('sp') {
+                        margin-left: 0;
+                        margin-right:  auto;
+                    }
+                }
+            }
+        }
+    }
+
+}

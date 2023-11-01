@@ -1,0 +1,100 @@
+#menu {
+    position: fixed;
+    height: 100vh;
+    width: 425rem;
+    background-color: rgba($color: #1394AB, $alpha: .9);
+    top: 0;
+    right: -426rem;
+    transition: all .5s;
+    color: #fff;
+    @include media('sp') {
+        width: 80%;
+        right: -80%;
+    }
+    &.active {
+        right: 0;
+    }
+    .hamburger {
+        width: max-content;
+        margin-left: auto;
+        margin-right: 50rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 35rem;
+        cursor: pointer;
+        user-select: none;
+
+        @include media('sp') {
+            margin-right: 25rem;
+        }
+        svg {
+            width: 70rem;
+        }
+    
+        span {
+            line-height: 1;
+            display: block;
+            margin-top: 13.5rem;
+            position: relative;
+            z-index: 10;
+            color: #fff;
+        }
+    }
+    ul {
+        position: absolute;
+        width: max-content;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 18rem;
+        font-weight: 600;
+        @include media('sp') {
+            font-size: 30rem;
+        }
+        a {
+            transition: all .35s;
+            &:hover {
+                opacity: .75;
+            }
+            margin: 10rem 0;
+            img {
+                width: 27rem;
+                @include media('sp') {
+                    width: 50rem;
+                }
+            }
+           
+            display: flex;
+            align-items: center;
+            gap: 9.5rem;
+            @include media('sp') {
+                gap: 25rem;
+            }
+        }
+        .sns {
+            margin-top: 35rem;
+            display: flex;
+            svg {
+                transition: all .35s;
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+            .insta {
+                margin-right: 35rem;
+                width: 32rem;
+                @include media('sp') {
+                    width: 41.6rem;
+                }
+            }
+            .face {
+                width: 16.6rem;
+                @include media('sp') {
+                    width: 21.5rem;
+                }
+            }
+        }
+    }
+
+}

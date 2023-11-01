@@ -1,0 +1,144 @@
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+
+    .header_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 36.5rem 50rem;
+
+        @include media('sp') {
+            padding: 30rem 25rem;
+        }
+
+        .logo {
+            width: 180rem;
+            #logo {
+                width: 100%;
+                fill: #fff;
+                stroke-width: 0px;
+                transition: all .35s;
+            }
+
+            transition: all .35s;
+            @include media('sp') {
+                width: 250rem;
+            }
+        }
+
+        .header_right {
+            display: flex;
+            align-items: stretch;
+            gap: 30rem;
+            color: #fff;
+
+            .contact_btn {
+                width: 215rem;
+                height: 45rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 22.5rem;
+                border: 1px solid #fff;
+                transition: .35s all;
+                font-weight: 600;
+
+                &:hover {
+                    opacity: .75;
+                }
+
+                @include media('sp') {
+                    width: 250rem;
+                    height: 60rem;
+                    border-radius: 30rem;
+                }
+            }
+
+            .hamburger {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                cursor: pointer;
+                user-select: none;
+                transition: all .35s;
+
+                svg {
+                    width: 70rem;
+                    fill: #fff;
+                    display: block;
+                    transition: all .35s;
+                    overflow: visible;
+
+                    @include media('sp') {
+                        width: 80rem;
+                    }
+                }
+
+                @keyframes awesomeAnimation {
+                    0% {
+                        transform: translateY(0);
+                    }
+
+                    50% {
+                        transform: translateY(-2px);
+                    }
+
+                    100% {
+                        transform: translateY(0);
+                    }
+                }
+
+                /* Apply the animations to the SVG when hovering over it */
+                &:hover svg path {
+                    animation: awesomeAnimation 0.5s infinite;
+                }
+                span {
+                    line-height: 1;
+                    display: block;
+                    margin-top: 12.5rem;
+                    position: relative;
+                }
+            }
+        }
+
+        &.active {
+            // .logo {
+            //     background: url(../img/common/black_logo.png)  center center;
+            //     background-size: 100% 100%;
+
+            // }
+            .contact_btn {
+                border-color: #000;
+            }
+
+            * {
+                color: #000 !important;
+            }
+
+            svg {
+                fill: #000 !important;
+            }
+        }
+    }
+
+}
+
+.copyright {
+    color: #CCCCCC;
+    position: fixed;
+    right: 50rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    writing-mode: vertical-lr;
+    line-height: 1;
+    text-orientation: sideways-right;
+    white-space: nowrap;
+
+    @include media('sp') {
+        right: 25rem;
+    }
+}

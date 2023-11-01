@@ -1,0 +1,210 @@
+main.contact {
+    .container {
+        .contact_top {
+            .contact_ttl {
+                font-size: 26rem;
+                text-align: center;
+                letter-spacing: 2.5rem;
+
+                @include media('sp') {
+                    font-size: 39rem;
+                }
+            }
+
+            .circle {
+                width: 800rem;
+                height: 220rem;
+                background: #F5F5F5;
+                border-radius: 110rem;
+                margin: 55rem auto 115rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                line-height: 1;
+                gap: 40rem;
+
+                @include media('sp') {
+                    width: 100%;
+                    height: 300rem;
+                    border-radius: 100rem;
+                }
+
+                .tel {
+                    font-weight: 600;
+                    color: $primary;
+                    display: flex;
+                    align-items: baseline;
+                    gap: 13.5rem;
+                    justify-content: center;
+
+                    span {
+                        font-size: 26rem;
+
+                        @include media('sp') {
+                            font-size: 39rem;
+                        }
+                    }
+
+                    p {
+                        font-size: 50rem;
+
+                        @include media('sp') {
+                            font-size: 75rem;
+                        }
+                    }
+                }
+            }
+
+            .contact_content {
+                line-height: 60rem;
+
+                @include media('pc') {
+                    padding: 0 100rem;
+                }
+
+                .required {
+                    padding: 0 30rem;
+                    position: relative;
+                    margin: 20rem 0;
+                    &::before {
+                        width: 20rem;
+                        height: 20rem;
+                        content: '';
+                        background: $primary;
+                        position: absolute;
+                        left: 0;
+                        top: 20rem;
+                        border-radius: 10rem;
+                    }
+                }
+
+                ul {
+                    margin-top: 10rem;
+
+                    li {
+                        padding: 40rem 20rem 40rem 30rem;
+                        border-bottom: 1px solid #CECECE;
+                        position: relative;
+
+                        &:first-child {
+                            border-top: 1px solid #CECECE;
+
+                        }
+
+                        &::before {
+                            width: 20rem;
+                            height: 20rem;
+                            content: '';
+                            background: $primary;
+                            position: absolute;
+                            left: 0;
+                            top: 52rem;
+                            border-radius: 10rem;
+                        }
+
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        @include media('sp') {
+                            flex-direction: column;
+                            gap: 25rem;
+                        }
+
+
+
+                        span {
+                            padding-top: 13rem;
+                            line-height: 1;
+
+                            @include media('sp') {
+                                padding-top: 7rem;
+                            }
+                        }
+
+                        input {
+                            width: 700rem;
+                            height: 40rem;
+                            background: #F5F5F5;
+                            border: none;
+                            font-size: 20rem;
+                            padding: 0 15rem;
+
+                            @include media('sp') {
+                                font-size: 30rem;
+                                height: 80rem;
+                            }
+
+                            &[type="radio"] {
+                                width: 20rem;
+                                height: 20rem;
+                                accent-color: $primary;
+
+                                @include media('sp') {
+                                    width: 30rem;
+                                    height: 30rem;
+                                }
+                            }
+
+                        }
+
+
+                        textarea {
+                            width: 700rem;
+                            height: 265rem;
+                            background: #F5F5F5;
+                            border: none;
+                            font-size: 20rem;
+                            padding: 20rem;
+                            line-height: 40rem;
+
+                            @include media('sp') {
+                                font-size: 30rem;
+                            }
+                        }
+
+                        .contact_type {
+                            display: flex;
+                            width: 700rem;
+                            gap: 20rem;
+                            @include media('sp') {
+                                flex-direction: column;
+                                gap: 5rem;
+                            }
+                            line-height: 40rem;
+                            .sub_type {
+                                display: flex;
+                                align-items: center;
+                                gap: 12rem;
+                                width: max-content;
+
+                                @include media('sp') {
+                                    width: 100%;
+                                }
+                            }
+                        }
+
+                        input,
+                        textarea,
+                        .contact_type {
+                            @include media('sp') {
+                                width: 100%;
+                            }
+                        }
+                    }
+
+                }
+
+                .btn {
+                    font-size: 22rem;
+                    margin-top: 60rem;
+                    width: 250rem;
+                    @include media('sp') {
+                        font-size: 33rem;
+                    }
+                }
+            }
+        }
+    }
+}

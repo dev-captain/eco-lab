@@ -1,0 +1,25 @@
+main.privacy {
+    .container {
+        @include media('pc') {
+            padding-top: 95rem;
+            padding-bottom: 185rem;
+        }
+        &>p {
+            line-height: 60rem;
+        }
+        ul {
+            margin-top: 70rem;
+            line-height: 80rem;
+            list-style-type: decimal;
+            padding-left: 30rem;
+            font-size: 22rem;
+            font-weight: 600;
+            @include media('sp') {
+                font-size: 33rem;
+                padding-left: 45rem;
+                margin-top: 90rem;
+                line-height: 75rem;
+            }
+        }
+    }
+}
